@@ -1,0 +1,48 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_ancient_bone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ancient_weapons:ancient_bone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_ancient_fang": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ancient_weapons:ancient_fang"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ancient_weapons:bone_cleaver"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_ancient_bone",
+      "has_ancient_fang",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ancient_weapons:bone_cleaver"
+    ]
+  },
+  "sends_telemetry_event": false
+}

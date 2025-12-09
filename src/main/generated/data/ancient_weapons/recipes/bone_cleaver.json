@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "ancient_weapons:ancient_bone"
+    },
+    "F": {
+      "item": "ancient_weapons:ancient_fang"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "item": "minecraft:torchflower_seeds"
+    }
+  },
+  "pattern": [
+    " FB",
+    " BT",
+    "S  "
+  ],
+  "result": {
+    "item": "ancient_weapons:bone_cleaver"
+  },
+  "show_notification": true
+}

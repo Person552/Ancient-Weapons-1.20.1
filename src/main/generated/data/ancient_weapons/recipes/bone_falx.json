@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "ancient_weapons:ancient_bone"
+    },
+    "F": {
+      "item": "ancient_weapons:ancient_fang"
+    },
+    "P": {
+      "item": "minecraft:pitcher_pod"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " FB",
+    " BP",
+    "S  "
+  ],
+  "result": {
+    "item": "ancient_weapons:bone_falx"
+  },
+  "show_notification": true
+}

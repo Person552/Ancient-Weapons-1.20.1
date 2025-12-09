@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "ancient_weapons:ancient_bone"
+    },
+    "M": {
+      "item": "minecraft:moss_block"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " BB",
+    "MBB",
+    "SM "
+  ],
+  "result": {
+    "item": "ancient_weapons:bone_club"
+  },
+  "show_notification": true
+}
