@@ -1,7 +1,6 @@
 package me.dinoson850.ancientweapons.item.custom;
 
 import me.dinoson850.ancientweapons.effect.ModEffects;
-import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.ItemStack;

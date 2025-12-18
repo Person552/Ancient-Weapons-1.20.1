@@ -12,7 +12,7 @@ public class ArmorBreakEffect extends StatusEffect {
 
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
-        return;
+
     }
 
     @Override
