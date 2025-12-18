@@ -1,5 +1,6 @@
 package me.dinoson850.ancientweapons;
 
+import me.dinoson850.ancientweapons.effect.ModEffects;
 import me.dinoson850.ancientweapons.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -25,6 +26,8 @@ public class AncientWeapons implements ModInitializer {
 		// Proceed with mild caution.
 
 		ModItems.registerModItems();
+		ModEffects.registerEffects();
+
 		LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
 			if (source.isBuiltin() && Identifier.of("minecraft", "gameplay/sniffer_digging").equals(id)) {
 				LootPool.Builder poolBuilder = LootPool.builder()
