@@ -2,13 +2,13 @@ package me.dinoson850.ancientweapons.item.custom;
 
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
+import me.dinoson850.ancientweapons.effect.ModEffects;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
 
 public class BoneClubItem extends ToolItem {
@@ -33,9 +33,13 @@ public class BoneClubItem extends ToolItem {
         stack.damage(1, attacker, (e) -> e.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND));
 
         if (!attacker.getWorld().isClient) {
-            var instance = new StatusEffectInstance(StatusEffects.SLOWNESS, 70, 0, false, true, true);
+            var instance = new StatusEffectInstance(ModEffects.ARMOR_BREAK_EFFECT, 70, 0, false, true, true);
             target.addStatusEffect(instance);
+
+            // attacker.getWorld().playSoundFromEntity(null, target, SoundEvents.BLOCK_BONE_BLOCK_BREAK, SoundCategory.PLAYERS, 2.0f, 0.7f);
         }
+
+
         return true;
     }
 

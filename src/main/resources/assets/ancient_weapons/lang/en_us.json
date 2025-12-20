@@ -5,5 +5,6 @@
   "item.ancient_weapons.bone_club": "Bone Club",
   "item.ancient_weapons.bone_falx": "Bone Falx",
 
-  "effect.ancient_weapons.phytotoxin": "Phytotoxin"
+  "effect.ancient_weapons.phytotoxin": "Phytotoxin",
+  "effect.ancient_weapons.armor_break": "Bone Broken"
 }
