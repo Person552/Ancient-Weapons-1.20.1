@@ -3,6 +3,7 @@ package me.dinoson850.ancientweapons.item.custom;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
 import me.dinoson850.ancientweapons.effect.ModEffects;
+import me.dinoson850.ancientweapons.util.IPlayerEntityAttackCooldownGetter;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
@@ -33,6 +34,12 @@ public class BoneClubItem extends ToolItem {
         stack.damage(1, attacker, (e) -> e.sendEquipmentBreakStatus(EquipmentSlot.MAINHAND));
 
         if (!attacker.getWorld().isClient) {
+            if (attacker.isPlayer()) {
+                float prevAttackCooldown = ((IPlayerEntityAttackCooldownGetter)attacker).getPrevAttackCooldown();
+                if (prevAttackCooldown < 1.0) {
+                    return super.postHit(stack, target, attacker);
+                }
+            }
             var instance = new StatusEffectInstance(ModEffects.ARMOR_BREAK_EFFECT, 70, 0, false, true, true);
             target.addStatusEffect(instance);
 

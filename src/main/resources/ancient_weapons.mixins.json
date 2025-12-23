@@ -3,7 +3,8 @@
   "package": "me.dinoson850.ancientweapons.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "LivingEntityShieldDisabler"
+    "LivingEntityShieldDisabler",
+    "PlayerEntityAttackCooldownGetter"
   ],
   "injectors": {
     "defaultRequire": 1

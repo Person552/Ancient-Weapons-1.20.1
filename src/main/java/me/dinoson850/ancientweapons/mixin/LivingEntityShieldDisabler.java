@@ -9,14 +9,11 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 
 @Mixin(LivingEntity.class)
-public class LivingEntityShieldDisabler {
+public abstract class LivingEntityShieldDisabler {
     @Shadow
     public ItemStack getMainHandStack() { return null; }
 
-    @ModifyReturnValue(
-            method = "disablesShield",
-            at = @At("RETURN")
-    )
+    @ModifyReturnValue( method = "disablesShield", at = @At("RETURN") )
     protected boolean falxShieldDisable(boolean original) {
         return this.getMainHandStack().getItem() instanceof BoneFalxItem || original;
     }
